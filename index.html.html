@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>배서우의 포트폴리오</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Pretendard', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+      background: linear-gradient(to right, #000, #111);
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      opacity: 0.8;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 30px 20px 0;
+      background: #111;
+    }
+
+    .nav-btn {
+      padding: 12px 24px;
+      border: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .nav-btn:hover,
+    .nav-btn.active {
+      background: #fff;
+      color: #000;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #444;
+      padding-bottom: 8px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .skills div {
+      background: #111;
+      padding: 20px;
+      border: 1px solid #333;
+      border-radius: 12px;
+    }
+
+    ul {
+      line-height: 1.8;
+      padding-left: 20px;
+    }
+
+    a {
+      color: #4a90e2;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 10px;
+      background: #111;
+      color: #888;
+      font-size: 0.95em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>배서우</h1>
+    <p>기획력과 디자인을 겸한 콘텐츠 기획자</p>
+  </header>
+
+  <nav>
+    <button class="nav-btn active" data-section="about">About</button>
+    <button class="nav-btn" data-section="skills">Skills</button>
+    <button class="nav-btn" data-section="projects">Projects</button>
+    <button class="nav-btn" data-section="links">Links</button>
+  </nav>
+
+  <main>
+    <section id="about" class="active">
+      <h2>About Me</h2>
+      <p>단국대학교 서양화과를 졸업한 저는 기획과 시각 디자인의 융합에 관심이 많으며, 실무에서 브랜딩, 영상 기획, 디자인, 운영 전략 수립까지 넓은 범위의 프로젝트를 경험해왔습니다. 새로운 브랜드를 설계하고 문제 해결형 콘텐츠를 기획하며, 공공기관, 쇼핑몰, 민간 기업 등 다양한 환경에서 콘텐츠로 가치를 만들고자 노력해왔습니다.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div><strong>브랜딩 기획</strong><br>시각 요소와 메시지를 통합한 브랜딩 기획 경험</div>
+        <div><strong>콘텐츠 제작</strong><br>카드뉴스, 웹툰, 영상 기획안, 시나리오 등 제작 역량</div>
+        <div><strong>운영 전략</strong><br>데이터 기반 SNS 운영 전략 수립</div>
+        <div><strong>디자인 툴</strong><br>Photoshop, Illustrator, Figma 실무 활용</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>서울시 SNS 리브랜딩</strong> – 팔로워 2배 증가</li>
+        <li><strong>국가보훈부 이벤트 운영</strong> – 참여율 90%</li>
+        <li><strong>웹툰형 콘텐츠</strong> – 기획부터 시나리오·제작까지</li>
+        <li><strong>아이디어스 메인배너</strong> – 메인 노출 배너 디자인</li>
+      </ul>
+    </section>
+
+    <section id="links">
+      <h2>Links</h2>
+      <ul>
+        <li><a href="https://www.instagram.com/1303_project/" target="_blank">1303 Project 인스타그램</a></li>
+        <li><a href="https://www.instagram.com/tripmate_korea/" target="_blank">Tripmate Korea 인스타그램</a></li>
+        <li><a href="https://www.youtube.com/watch?v=De8JzTAjz8Y" target="_blank">보건복지부 유튜브 영상</a></li>
+        <li><a href="https://www.instagram.com/ibohun/" target="_blank">국가보훈부 인스타그램</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 배서우 | 디자인과 기획으로 일상을 설계합니다.
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.nav-btn');
+    const sections = document.querySelectorAll('main section');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const target = button.dataset.section;
+
+        // 버튼 스타일 토글
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // 섹션 표시 전환
+        sections.forEach(section => {
+          section.classList.remove('active');
+          if (section.id === target) section.classList.add('active');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
